@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.flutter_live_location_gmap">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
    <application
+
         android:label="flutter_live_location_gmap"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -38,6 +40,6 @@
             android:name="flutterEmbedding"
             android:value="2" />
         <meta-data android:name="com.google.android.geo.API_KEY" 
-            android:value="YOUR_API_KEY"/>
+            android:value="AIzaSyDo58hLrxrrtkshhDvZVyCkOqyb60CAe8s"/>
     </application>
 </manifest>

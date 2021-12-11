@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "886591991646",
+    "project_id": "wasalny-cf5dd",
+    "storage_bucket": "wasalny-cf5dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886591991646:android:371fad2c4a366baf56a9cf",
+        "android_client_info": {
+          "package_name": "com.example.flutter_live_location_gmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886591991646-6cgpbfreousivamc1vkbol44acq5oreg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWWs7GYVPRQq3EmmDNlvGzl6WH_uasiUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886591991646-6cgpbfreousivamc1vkbol44acq5oreg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

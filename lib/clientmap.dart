@@ -7,12 +7,15 @@ import 'package:location/location.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class Client extends StatefulWidget {
+class Clientmap extends StatefulWidget {
+  final String tourid;
+
+  const Clientmap({Key key, this.tourid}) : super(key: key);
   @override
-  _clientState createState() => _clientState();
+  _ClientmapState createState() => _ClientmapState();
 }
 
-class _clientState extends State<Client> {
+class _ClientmapState extends State<Clientmap> {
   LatLng _initialCameraPosition = LatLng(30.4408569, 30.960889444444444);
   GeoPoint geo;
 
@@ -61,16 +64,15 @@ class _clientState extends State<Client> {
 
     await FirebaseFirestore.instance.collection("info").snapshots().listen(
       (event) {
-        event.docChanges.forEach((element) {
-          geo = element.doc.get("mm");
-          print(geo.latitude);
-          FirebaseFirestore.instance
+        event.docChanges.forEach((element) async {
+          await FirebaseFirestore.instance
               .collection('info')
-              .where('from', isEqualTo: "cairo")
-              .where("", isEqualTo: "")
+              .where('tid', isEqualTo: widget.tourid)
               .get()
               .then((querySnapshot) {
-            querySnapshot.docs.forEach((element) {});
+            querySnapshot.docs.forEach((element) {
+              geo = element.get("driverlocation");
+            });
           });
 
           _controller.animateCamera(
